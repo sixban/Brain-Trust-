@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clothing Store Services</title>
+ 
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background:  linear-gradient(to right,#1b1b24, #fff, #000000);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #00000066;
+  backdrop-filter: blur(10px);
+}
+
+nav h1 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #4da6ff;
+}
+/* Header */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Services Section */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px #00000033;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.card p {
+  padding: 0 15px 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.card button {
+  margin: 15px;
+  padding: 10px;
+  width: calc(100% - 30px);
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: linear-gradient(to right,#1b1b24, #fff, #000000);
+  color: black;
+}
+
+/* Add More Button */
+.add-more {
+  text-align: center;
+  padding: 30px;
+}
+
+.add-more-btn {
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: black;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.add-more-btn:hover {
+  background:  linear-gradient(to bottom, #050f16, #fff, #050525);
+  transform: scale(1.05);
+  color: black;
+}
+
+</style>
+<body>
+  <nav>
+  <h1>BRAIN TRUST</h1>
+  <div>
+    <a href="code.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="login.html">Login</a>
+  </div>
+</nav>
+  <header class="header">
+    <h1>Our Clothing Services</h1>
+    <p>Manage, display and grow your fashion business</p>
+  </header>
+
+  <section class="services-container">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="images/shoe.jpeg" alt="shoes">
+      <h3>All kind of shoes</h3>
+      <p>Manage shoe categories in one place.</p>
+      <button>Add Item</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="images/shirts.jpeg" alt="Men shirts">
+      <h3>Men Shirts</h3>
+      <p>Track and update Men clothing stock.</p>
+      <button>Add Item</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="images/pullover.jpeg" alt="Pull overs">
+      <h3>Attractive sweaters</h3>
+      <p>Manage all fashion items in one place.</p>
+      <button>Add Item</button>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="images/official.jpeg" alt="Official Trousers">
+      <h3>Trousers</h3>
+      <p>Manage all fashion items in one place.</p>
+      <button>Add Item</button>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="images/boxer.jpeg" alt="Boxers">
+      <h3>Men underwear</h3>
+      <p>Manage all fashion items in one place.</p>
+      <button>Add Item</button>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="images/mzura.jpg" alt="Caps">
+      <h3>New Arrivals</h3>
+      <p>Add and showcase new fashion arrivals.</p>
+      <button>Add Item</button>
+    </div>
+
+     <div class="card">
+      <img src="images/jeans.jpeg" alt="Men Clothes">
+      <h3>Men Clothing</h3>
+      <p>Manage all men fashion items in one place.</p>
+      <button>Add Item</button>
+    </div>
+
+     <div class="card">
+      <img src="images/combo.jpeg" alt="Paired Clothes">
+      <h3>Paired Men Clothing</h3>
+      <p>Manage all men fashion items in one place.</p>
+      <button>Add Item</button>
+    </div>
+
+  </section>
+
+  <!-- Add More Items Button -->
+  <div class="add-more">
+    <button class="add-more-btn">+ Add More Items</button>
+  </div>
+
+</body>
+</html>
