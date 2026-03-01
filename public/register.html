@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <form id="registerForm">
+        <input type="text" id="username" placeholder="Username" required><br>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+    document.getElementById('registerForm').onsubmit = async (e) => {
+        e.preventDefault();
+        
+        const res = await fetch('/api/register', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            })
+        });
+        
+        const data = await res.json();
+        if (data.success) {
+            alert('Registered! Redirecting...');
+            window.location.href = '/dashboard.html';
+        } else {
+            alert('Error: ' + data.error);
+        }
+    };
+    </script>
+</body>
+</html>
